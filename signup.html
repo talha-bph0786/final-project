@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Laptop-Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 15px;
+    }
+    .glass-effect:hover {
+      box-shadow: 0 12px 48px rgba(31, 38, 135, 0.6);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white flex justify-center items-center h-screen">
+  <!-- Signup Form -->
+  <div class="glass-effect p-8 max-w-md w-full text-center">
+    <h1 class="text-4xl font-bold text-yellow-400 mb-6">Signup</h1>
+    <form>
+      <div class="mb-4">
+        <label for="username" class="block text-left text-sm text-gray-400 mb-2">Username</label>
+        <input id="username" type="text" class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-left text-sm text-gray-400 mb-2">Email</label>
+        <input id="email" type="email" class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      </div>
+      <div class="mb-6">
+        <label for="password" class="block text-left text-sm text-gray-400 mb-2">Password</label>
+        <input id="password" type="password" class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      </div>
+      <button type="button" onclick="redirectToHome()" class="w-full bg-yellow-400 text-black py-2 rounded hover:bg-yellow-500 transition">Signup</button>
+    </form>
+    <p class="mt-6 text-gray-400">
+      Already have an account? 
+      <a href="login.html" class="text-yellow-400 hover:underline">Login</a>
+    </p>
+  </div>
+
+  <!-- JavaScript to redirect to homepage -->
+  <script>
+    function redirectToHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

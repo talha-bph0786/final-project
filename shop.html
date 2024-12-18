@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Laptop-Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Glassmorphism effect for cards */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-3xl font-extrabold text-yellow-400">Laptop-Zone</h1>
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="p-2 rounded-full bg-gray-700 text-white w-64" id="searchBar">
+      </div>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="shop.html" class="text-yellow-400 font-bold">Shop</a>
+        <a href="login.html" class="hover:text-yellow-400">Login</a>
+        <a href="signup.html" class="hover:text-yellow-400">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="relative h-72 bg-cover bg-center" style="background-image: url('https://images.squarespace-cdn.com/content/v1/6487c6aab390de5070d25737/1698318523944-JT9WN562EQ1O2B1H4VSY/best_budget_gaming_laptop.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <h2 class="text-5xl text-yellow-400 font-bold drop-shadow-lg">Discover Laptops for Every Need</h2>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-12 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Shop by Categories</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Category 1 -->
+        <div class="glass-card p-6 flex flex-col items-center">
+          <img src="/images/hp1.jpg" alt="Student Laptops" class="h-40 w-full object-cover mb-4 rounded-md">
+          <h4 class="text-2xl font-bold">Student Laptops</h4>
+          <p class="text-gray-400 text-center mt-2">Affordable laptops for everyday use and studies.</p>
+        </div>
+        <!-- Category 2 -->
+        <div class="glass-card p-6 flex flex-col items-center">
+          <img src="/images/hp7.jpg" alt="Business Laptops" class="h-40 w-full object-cover mb-4 rounded-md">
+          <h4 class="text-2xl font-bold">Business Laptops</h4>
+          <p class="text-gray-400 text-center mt-2">Reliable laptops for professionals.</p>
+        </div>
+        <!-- Category 3 -->
+        <div class="glass-card p-6 flex flex-col items-center">
+          <img src="/images/acer2.jpg" alt="Gaming Laptops" class="h-40 w-full object-cover mb-4 rounded-md">
+          <h4 class="text-2xl font-bold">Gaming Laptops</h4>
+          <p class="text-gray-400 text-center mt-2">Powerful laptops for gaming enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="products" class="py-12 px-6 bg-gray-800">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Featured Products</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-list">
+<!-- Product Cards -->
+<!-- <section>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> -->
+    <!-- Product 1 -->
+    <div class="glass-card p-4">
+      <img src="/images/acer.jpg" alt="Acer Aspire" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Acer Aspire</h4>
+      <p class="text-gray-400 mb-4">8GB RAM, 512GB SSD, Intel Core i5.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+        Buy Now
+      </a>
+    </div>
+    <!-- Product 2 -->
+    <div class="glass-card p-4">
+      <img src="/images/acer2.jpg" alt="Acer Predator" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Acer Predator</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 1TB SSD, NVIDIA RTX 3060.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 3 -->
+    <div class="glass-card p-4">
+      <img src="/images/asus1.jpg" alt="Asus ROG Strix" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Asus ROG Strix</h4>
+      <p class="text-gray-400 mb-4">32GB RAM, 2TB SSD, AMD Ryzen 9.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 4 -->
+    <div class="glass-card p-4">
+      <img src="/images/business.jpeg" alt="HP EliteBook" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP EliteBook</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 512GB SSD, Intel Core i7.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 5 -->
+    <div class="glass-card p-4">
+      <img src="/images/business1.jpeg" alt="Dell Latitude" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Dell Latitude</h4>
+      <p class="text-gray-400 mb-4">8GB RAM, 256GB SSD, Intel Core i5.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 6 -->
+    <div class="glass-card p-4">
+      <img src="/images/dell1.jpg" alt="Dell Inspiron" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Dell Inspiron</h4>
+      <p class="text-gray-400 mb-4">12GB RAM, 512GB SSD, NVIDIA MX250.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 7 -->
+    <div class="glass-card p-4">
+      <img src="/images/dell2.jpg" alt="Dell XPS 13" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Dell XPS 13</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 1TB SSD, Intel Iris Xe Graphics.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 8 -->
+    <div class="glass-card p-4">
+      <img src="/images/dell3.jpg" alt="Dell G5 Gaming" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Dell G5 Gaming</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 1TB SSD, NVIDIA RTX 3050.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 9 -->
+    <div class="glass-card p-4">
+      <img src="/images/gaming.jpeg" alt="Lenovo Legion 5" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Lenovo Legion 5</h4>
+      <p class="text-gray-400 mb-4">32GB RAM, 2TB SSD, NVIDIA RTX 3070.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 10 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp1.jpg" alt="HP Pavilion" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP Pavilion</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 512GB SSD, Intel Core i7.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 11 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp2game.jpg" alt="HP Omen" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP Omen</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 1TB SSD, NVIDIA RTX 3060.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 12 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp3game.jpg" alt="HP Victus" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP Victus</h4>
+      <p class="text-gray-400 mb-4">8GB RAM, 512GB SSD, AMD Radeon Graphics.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 13 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp4.jpg" alt="HP Envy" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP Envy</h4>
+      <p class="text-gray-400 mb-4">16GB RAM, 1TB SSD, Intel Core i7.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 14 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp5.jpg" alt="HP Spectre" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP Spectre</h4>
+      <p class="text-gray-400 mb-4">32GB RAM, 2TB SSD, OLED Display.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 15 -->
+    <div class="glass-card p-4">
+      <img src="/images/hp6.jpg" alt="HP ProBook" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">HP ProBook</h4>
+      <p class="text-gray-400 mb-4">8GB RAM, 256GB SSD, Intel Core i3.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+    <!-- Product 16 -->
+    <div class="glass-card p-4">
+      <img src="/images/student.jpeg" alt="Lenovo IdeaPad" class="h-40 w-full object-cover mb-4 rounded-md">
+      <h4 class="text-xl font-bold">Lenovo IdeaPad</h4>
+      <p class="text-gray-400 mb-4">12GB RAM, 1TB HDD, AMD Ryzen 5.</p>
+      <a href="payment.html" class="bg-yellow-400 text-black py-2 px-4 rounded w-full hover:bg-yellow-500 transition text-center block">
+  Buy Now
+</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 py-6 mt-10">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-400 text-sm">&copy; 2024 Laptop-Zone. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" class="text-yellow-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-yellow-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-yellow-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-yellow-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FontAwesome for Social Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

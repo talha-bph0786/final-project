@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop-Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Hover Effect for Glassy Box */
+    .glass-hover {
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 15px rgba(31, 38, 135, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.6);
+      transform: scale(1.1);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* Uniform Size for Product Images */
+    .product-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
+  <!-- Header Section -->
+  <header class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-lg">
+    <div class="logo flex items-center space-x-2">
+      <span class="text-3xl font-bold text-yellow-400">Laptop</span>
+      <span class="text-3xl font-bold bg-yellow-400 text-black px-2 py-1 rounded">Zone</span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-yellow-400">Home</a>
+      <a href="#products" class="hover:text-yellow-400">Products</a>
+      <a href="#about" class="hover:text-yellow-400">About</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
+    </nav>
+    <div class="space-x-4">
+      <a href="login.html">
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Login</button>
+      </a>      
+      <a href="signup.html">
+        <button class="bg-transparent border border-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Signup</button>
+      </a>
+    </div>
+    <button class="md:hidden text-yellow-400 text-2xl">&#9776;</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.squarespace-cdn.com/content/v1/6487c6aab390de5070d25737/1698318523944-JT9WN562EQ1O2B1H4VSY/best_budget_gaming_laptop.jpg');">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="p-10 glass-hover rounded-lg text-center">
+        <h1 class="text-5xl font-bold">Explore Top Laptops</h1>
+        <p class="text-xl mt-4">Find the best deals on gaming, work, and student laptops!</p>
+        <a href="shop.html"><button class="mt-6 bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-500 transition">Shop Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-20 px-6 bg-gray-900">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Featured Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Card -->
+      <div class="glass-hover p-6 rounded-lg text-center">
+        <img src="/images/gaming.jpeg" alt="Gaming Laptop" class="product-image rounded mb-4 mx-auto">
+        <h3 class="text-2xl font-bold">Gaming Laptop</h3>
+        <p class="text-gray-400 mt-2">High performance for your gaming needs.</p>
+        <button class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Buy Now</button>
+      </div>
+      <!-- Repeat Product Card -->
+      <div class="glass-hover p-6 rounded-lg text-center">
+        <img src="/images/business1.jpeg" alt="Business Laptop" class="product-image rounded mb-4 mx-auto">
+        <h3 class="text-2xl font-bold">Business Laptop</h3>
+        <p class="text-gray-400 mt-2">Sleek design for professionals.</p>
+        <button class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Buy Now</button>
+      </div>
+      <!-- Repeat Product Card -->
+      <div class="glass-hover p-6 rounded-lg text-center">
+        <img src="/images/student.jpeg" alt="Student Laptop" class="product-image rounded mb-4 mx-auto">
+        <h3 class="text-2xl font-bold">Student Laptop</h3>
+        <p class="text-gray-400 mt-2">Affordable and reliable for students.</p>
+        <button class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-8">Why Choose Laptop-Zone?</h2>
+    <p class="text-xl text-gray-400 max-w-3xl mx-auto">At Laptop-Zone, we believe in providing the best laptops to meet your needs. Whether you're a gamer, a student, or a professional, we have something for you. Experience unmatched quality and customer support.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-gray-800 text-center text-gray-400">
+    <div class="flex justify-center space-x-6 mb-6">
+      <a href="#" class="text-yellow-400 text-3xl hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-yellow-400 text-3xl hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-yellow-400 text-3xl hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-yellow-400 text-3xl hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="text-sm">&copy; 2024 Laptop-Zone. All rights reserved.</p>
+    <p class="text-sm mt-2">Designed with love and passion for technology.</p>
+  </footer>
+
+  <!-- Include FontAwesome for social media icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
